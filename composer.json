@@ -1,0 +1,22 @@
+{
+    "name": "syscover/facturadirecta",
+    "version": "5.2",
+    "description": "Facturadirecta package",
+    "keywords": ["syscover","pulsar","laravel","Facturadirecta"],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "SYSCOVER SL",
+            "email": "info@syscover.com"
+        }
+    ],
+    "require": {
+        "php": ">=5.5.9"
+    },
+    "autoload": {
+        "psr-4": {
+            "Syscover\\Facturadirecta\\": "src/Syscover/Facturadirecta"
+        }
+    },
+    "minimum-stability": "dev"
+}
