@@ -25,3 +25,11 @@ and execute composer update again:
 ```
 composer update
 ```
+
+**4 - Set config options on config\facturadirecta.php**
+
+The best option is set options in environment file, with this example
+```
+FACTURADIRECTA_ACCOUNT_NAME=xxxxxx
+FACTURADIRECTA_API_KEY=xxxxxxxxxxxxxxxxxxxx
+```
