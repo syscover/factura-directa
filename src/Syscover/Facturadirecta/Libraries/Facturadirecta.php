@@ -69,7 +69,7 @@ class Facturadirecta
             // error de carga
         }
 
-        $response = json_decode(json_encode((array) simplexml_load_string($response, null, LIBXML_NOCDATA)), true);
+        $response = json_decode(json_encode(simplexml_load_string($response, null, LIBXML_NOCDATA)), true);
 
         return $response;
     }
