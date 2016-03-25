@@ -1,6 +1,5 @@
 <?php namespace Syscover\Facturadirecta\Controllers;
 
-use Illuminate\Http\Request;
 use Syscover\Facturadirecta\Facades\Facturadirecta;
 use Syscover\Pulsar\Controllers\Controller;
 
@@ -11,9 +10,9 @@ use Syscover\Pulsar\Controllers\Controller;
 
 class FacturadirectaController extends Controller {
 
-    public function getClients(Request $request)
+    public function getClients()
     {
-        $fdCustomers    = Facturadirecta::getClients($request->all());
+        $fdCustomers    = Facturadirecta::getClients($this->request->all());
 
         return response()->json($fdCustomers);
     }
