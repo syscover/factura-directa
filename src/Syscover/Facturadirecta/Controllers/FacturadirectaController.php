@@ -1,7 +1,7 @@
 <?php namespace Syscover\Facturadirecta\Controllers;
 
-// todo, hace falta que herede de este controlador?
-use Syscover\Pulsar\Core\Controller;
+use Illuminate\Routing\Controller as BaseController;
+use Illuminate\Http\Request;
 use Syscover\Facturadirecta\Facades\Facturadirecta;
 
 /**
@@ -9,12 +9,19 @@ use Syscover\Facturadirecta\Facades\Facturadirecta;
  * @package Syscover\Facturadirecta\Controllers
  */
 
-class FacturadirectaController extends Controller
+class FacturadirectaController extends BaseController
 {
-    public function getClients()
+    public function getClients(Request $request)
     {
-        $fdCustomers    = Facturadirecta::getClients($this->request->all());
+        $fdCustomers = Facturadirecta::getClients($request->all());
 
         return response()->json($fdCustomers);
+    }
+
+    public function getInvoices(Request $request)
+    {
+        $fdInvoices = Facturadirecta::getInvoices($request->all());
+
+        return response()->json($fdInvoices);
     }
 }

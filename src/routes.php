@@ -18,4 +18,11 @@ Route::group(['middleware' => ['web', 'pulsar']], function() {
     |--------------------------------------------------------------------------
     */
     Route::post(config('pulsar.appName') . 'api/facturadirecta/customers', ['as'=>'apiFacturadirectaCustomers',    'uses'=>'Syscover\Facturadirecta\Controllers\FacturadirectaController@getClients']);
+
+    /*
+    |--------------------------------------------------------------------------
+    | INVOICES
+    |--------------------------------------------------------------------------
+    */
+    Route::post(config('pulsar.appName') . 'api/facturadirecta/invoices', ['as'=>'apiFacturadirectaInvoices',    'uses'=>'Syscover\Facturadirecta\Controllers\FacturadirectaController@getInvoices']);
 });

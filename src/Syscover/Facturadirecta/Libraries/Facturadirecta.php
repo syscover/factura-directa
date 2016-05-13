@@ -73,4 +73,46 @@ class Facturadirecta
 
         return $response;
     }
+
+    public static function getInvoices($params = [])
+    {
+        $url = 'https://' . config('facturadirecta.accountName') . '.facturadirecta.com/api/invoices.xml';
+
+        // set params in url
+        $i = 0;
+        foreach($params as $key => $value)
+        {
+            if($i === 0)
+                $url .= '?';
+            else
+                $url .= '&';
+
+            $url .= $key . '=' .  $value;
+            $i++;
+        }
+
+        $curlParams = [
+            'url'               => $url,
+            'httpAuth'          => config('facturadirecta.api') . ':x',
+            'followLocation'    => false,
+            'returnTransfer'    => true,
+            'timeout'           => 30,
+        ];
+
+        $response = Remote::send($curlParams);
+
+        $doc = new \DomDocument();
+        $doc->loadXML($response);
+
+        $response = json_decode(json_encode((array) simplexml_load_string($response, null, LIBXML_NOCDATA)), true);
+
+        // change index @attributes by attributes
+        $response['attributes'] = $response['@attributes'];
+        unset($response['@attributes']);
+
+        if($response['attributes']['total'] === "1")
+            $response['invoice'] = [$response['invoice']];
+
+        return $response;
+    }
 }
