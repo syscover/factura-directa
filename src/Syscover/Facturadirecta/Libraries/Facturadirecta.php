@@ -115,4 +115,34 @@ class Facturadirecta
 
         return $response;
     }
+
+    public static function getInvoice($id)
+    {
+        $url = 'https://' . config('facturadirecta.accountName') . '.facturadirecta.com/api/invoices/' . $id . '.xml';
+
+        $curlParams = [
+            'url'               => $url,
+            'httpAuth'          => config('facturadirecta.api') . ':x',
+            'followLocation'    => false,
+            'returnTransfer'    => true,
+            'timeout'           => 30,
+        ];
+
+        $response = Remote::send($curlParams);
+
+        $doc = new \DomDocument();
+
+        try
+        {
+            $doc->loadXML($response);
+        }
+        catch(\Exception $e)
+        {
+            // error de carga
+        }
+
+        $response = json_decode(json_encode(simplexml_load_string($response, null, LIBXML_NOCDATA)), true);
+
+        return $response;
+    }
 }
