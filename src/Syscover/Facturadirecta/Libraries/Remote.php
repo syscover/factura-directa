@@ -14,6 +14,7 @@ class Remote
         curl_setopt($curl, CURLOPT_URL,                     $curlParams['url']);
         curl_setopt($curl, CURLOPT_RETURNTRANSFER,          isset($curlParams['returnTransfer'])? $curlParams['returnTransfer'] : false);
         curl_setopt($curl, CURLOPT_TIMEOUT,                 isset($curlParams['timeout'])? $curlParams['timeout'] : 10);
+        
         if(isset($curlParams['followLocation']))
             curl_setopt($curl, CURLOPT_FOLLOWLOCATION,      $curlParams['followLocation']);
 
@@ -39,6 +40,7 @@ class Remote
             curl_setopt($curl, CURLOPT_POSTFIELDS,          $params);
 
         $response = curl_exec($curl);
+
         curl_close($curl);
 
         return $response;

@@ -15,7 +15,7 @@ class Facturadirecta
             else
                 $url .= '&';
 
-            $url .= $key . '=' .  $value;
+            $url .= $key . '=' .  urlencode($value);
             $i++;
         }
 
@@ -24,7 +24,7 @@ class Facturadirecta
             'httpAuth'          => config('facturadirecta.api') . ':x',
             'followLocation'    => false,
             'returnTransfer'    => true,
-            'timeout'           => 30,
+            'timeout'           => 30
         ];
 
         $response = Remote::send($curlParams);
@@ -87,7 +87,7 @@ class Facturadirecta
             else
                 $url .= '&';
 
-            $url .= $key . '=' .  $value;
+            $url .= $key . '=' .  urlencode($value);
             $i++;
         }
 
