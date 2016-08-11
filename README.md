@@ -4,18 +4,18 @@
 
 **1 - After install Laravel framework, insert on file composer.json, inside require object this value**
 ```
-"syscover/factura-directa": "dev-master"
+"syscover/factura-directa": "~1.0"
 ```
 
 and execute on console:
 ```
-composer update
+composer install
 ```
 
 **2 - Register service provider, on file config/app.php add to providers array**
 
 ```
-Syscover\Facturadirecta\FacturaDirectaServiceProvider::class,
+Syscover\FacturaDirecta\FacturaDirectaServiceProvider::class,
 
 ```
 
@@ -23,7 +23,7 @@ Syscover\Facturadirecta\FacturaDirectaServiceProvider::class,
 
 and execute composer update again:
 ```
-composer install
+composer update
 ```
 
 **4 - Set config options on config\facturaDirecta.php**
