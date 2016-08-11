@@ -4,7 +4,7 @@
 
 **1 - After install Laravel framework, insert on file composer.json, inside require object this value**
 ```
-"syscover/facturadirecta": "dev-master"
+"syscover/factura-directa": "dev-master"
 ```
 
 and execute on console:
