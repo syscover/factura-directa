@@ -1,6 +1,6 @@
 <?php namespace Syscover\Facturadirecta\Libraries;
 
-class Remote
+class RemoteLibrary
 {
     /**
      * @param $curlParams

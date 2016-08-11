@@ -1,6 +1,6 @@
 <?php namespace Syscover\FacturaDirecta\Libraries;
 
-class FacturaDirecta
+class FacturaDirectaLibrary
 {
     public static function getClients($params = [])
     {
@@ -27,7 +27,7 @@ class FacturaDirecta
             'timeout'           => 30
         ];
 
-        $response = Remote::send($curlParams);
+        $response = RemoteLibrary::send($curlParams);
 
         $doc = new \DomDocument();
         $doc->loadXML($response);
@@ -56,7 +56,7 @@ class FacturaDirecta
             'timeout'           => 30,
         ];
 
-        $response = Remote::send($curlParams);
+        $response = RemoteLibrary::send($curlParams);
 
         $doc = new \DomDocument();
 
@@ -99,7 +99,7 @@ class FacturaDirecta
             'timeout'           => 30,
         ];
 
-        $response = Remote::send($curlParams);
+        $response = RemoteLibrary::send($curlParams);
 
         $doc = new \DomDocument();
         $doc->loadXML($response);
@@ -128,7 +128,7 @@ class FacturaDirecta
             'timeout'           => 30,
         ];
 
-        $response = Remote::send($curlParams);
+        $response = RemoteLibrary::send($curlParams);
 
         $doc = new \DomDocument();
 

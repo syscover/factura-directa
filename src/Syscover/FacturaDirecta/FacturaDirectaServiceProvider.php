@@ -1,7 +1,7 @@
 <?php namespace Syscover\FacturaDirecta;
 
 use Illuminate\Support\ServiceProvider;
-use Syscover\FacturaDirecta\Libraries\FacturaDirecta;
+use Syscover\FacturaDirecta\Libraries\FacturaDirectaLibrary;
 
 class FacturaDirectaServiceProvider extends ServiceProvider
 {
@@ -31,7 +31,7 @@ class FacturaDirectaServiceProvider extends ServiceProvider
 	{
 		$this->app->bind('FacturaDirecta', function($app)
 		{
-			return new FacturaDirecta($app);
+			return new FacturaDirectaLibrary($app);
 		});
 	}
 }
