@@ -1,5 +1,7 @@
 # Factura Directa to Laravel 5.2
 
+[![Total Downloads](https://poser.pugx.org/syscover/factura-directa/downloads)](https://packagist.org/packages/syscover/factura-directa)
+
 ## Installation
 
 **1 - After install Laravel framework, insert on file composer.json, inside require object this value**
