@@ -15,7 +15,7 @@ composer update
 **2 - Register service provider, on file config/app.php add to providers array**
 
 ```
-Syscover\Facturadirecta\FacturadirectaServiceProvider::class,
+Syscover\Facturadirecta\FacturaDirectaServiceProvider::class,
 
 ```
 
@@ -23,10 +23,10 @@ Syscover\Facturadirecta\FacturadirectaServiceProvider::class,
 
 and execute composer update again:
 ```
-composer update
+composer install
 ```
 
-**4 - Set config options on config\facturadirecta.php**
+**4 - Set config options on config\facturaDirecta.php**
 
 The best option is set options in environment file, with this example
 ```

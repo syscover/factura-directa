@@ -1,9 +1,9 @@
-<?php namespace Syscover\Facturadirecta;
+<?php namespace Syscover\FacturaDirecta;
 
 use Illuminate\Support\ServiceProvider;
-use Syscover\Facturadirecta\Libraries\Facturadirecta;
+use Syscover\FacturaDirecta\Libraries\FacturaDirecta;
 
-class FacturadirectaServiceProvider extends ServiceProvider
+class FacturaDirectaServiceProvider extends ServiceProvider
 {
 	/**
 	 * Bootstrap the application services.
@@ -18,7 +18,7 @@ class FacturadirectaServiceProvider extends ServiceProvider
 
 		// register config files
 		$this->publishes([
-			__DIR__ . '/../../config/facturadirecta.php' => config_path('facturadirecta.php')
+			__DIR__ . '/../../config/facturaDirecta.php' => config_path('facturaDirecta.php')
 		]);
 	}
 
@@ -29,9 +29,9 @@ class FacturadirectaServiceProvider extends ServiceProvider
 	 */
 	public function register()
 	{
-		$this->app->bind('Facturadirecta', function($app)
+		$this->app->bind('FacturaDirecta', function($app)
 		{
-			return new Facturadirecta($app);
+			return new FacturaDirecta($app);
 		});
 	}
 }

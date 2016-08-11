@@ -15,7 +15,7 @@
     },
     "autoload": {
         "psr-4": {
-            "Syscover\\Facturadirecta\\": "src/Syscover/Facturadirecta"
+            "Syscover\\FacturaDirecta\\": "src/Syscover/FacturaDirecta"
         }
     },
     "minimum-stability": "dev"

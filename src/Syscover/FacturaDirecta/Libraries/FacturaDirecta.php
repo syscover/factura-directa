@@ -1,10 +1,10 @@
-<?php namespace Syscover\Facturadirecta\Libraries;
+<?php namespace Syscover\FacturaDirecta\Libraries;
 
-class Facturadirecta
+class FacturaDirecta
 {
     public static function getClients($params = [])
     {
-        $url = 'https://' . config('facturadirecta.accountName') . '.facturadirecta.com/api/clients.xml';
+        $url = 'https://' . config('facturaDirecta.accountName') . '.facturadirecta.com/api/clients.xml';
 
         // set params in url
         $i = 0;
@@ -21,7 +21,7 @@ class Facturadirecta
 
         $curlParams = [
             'url'               => $url,
-            'httpAuth'          => config('facturadirecta.api') . ':x',
+            'httpAuth'          => config('facturaDirecta.api') . ':x',
             'followLocation'    => false,
             'returnTransfer'    => true,
             'timeout'           => 30
@@ -46,11 +46,11 @@ class Facturadirecta
 
     public static function getClient($id)
     {
-        $url = 'https://' . config('facturadirecta.accountName') . '.facturadirecta.com/api/clients/' . $id . '.xml';
+        $url = 'https://' . config('facturaDirecta.accountName') . '.facturadirecta.com/api/clients/' . $id . '.xml';
 
         $curlParams = [
             'url'               => $url,
-            'httpAuth'          => config('facturadirecta.api') . ':x',
+            'httpAuth'          => config('facturaDirecta.api') . ':x',
             'followLocation'    => false,
             'returnTransfer'    => true,
             'timeout'           => 30,
@@ -76,7 +76,7 @@ class Facturadirecta
 
     public static function getInvoices($params = [])
     {
-        $url = 'https://' . config('facturadirecta.accountName') . '.facturadirecta.com/api/invoices.xml';
+        $url = 'https://' . config('facturaDirecta.accountName') . '.facturadirecta.com/api/invoices.xml';
 
         // set params in url
         $i = 0;
@@ -93,7 +93,7 @@ class Facturadirecta
 
         $curlParams = [
             'url'               => $url,
-            'httpAuth'          => config('facturadirecta.api') . ':x',
+            'httpAuth'          => config('facturaDirecta.api') . ':x',
             'followLocation'    => false,
             'returnTransfer'    => true,
             'timeout'           => 30,
@@ -118,11 +118,11 @@ class Facturadirecta
 
     public static function getInvoice($id)
     {
-        $url = 'https://' . config('facturadirecta.accountName') . '.facturadirecta.com/api/invoices/' . $id . '.xml';
+        $url = 'https://' . config('facturaDirecta.accountName') . '.facturadirecta.com/api/invoices/' . $id . '.xml';
 
         $curlParams = [
             'url'               => $url,
-            'httpAuth'          => config('facturadirecta.api') . ':x',
+            'httpAuth'          => config('facturaDirecta.api') . ':x',
             'followLocation'    => false,
             'returnTransfer'    => true,
             'timeout'           => 30,
