@@ -1,5 +1,5 @@
 {
-    "name": "syscover/facturadirecta",
+    "name": "syscover/factura-directa",
     "description": "Factura Directa package",
     "keywords": ["syscover","pulsar","laravel","facturadirecta"],
     "authors": [
