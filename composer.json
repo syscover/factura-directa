@@ -2,7 +2,7 @@
     "name": "syscover/factura-directa",
     "version": "5.2",
     "description": "Factura Directa package",
-    "keywords": ["syscover","pulsar","laravel","Facturadirecta"],
+    "keywords": ["syscover","pulsar","laravel","facturadirecta"],
     "license": "MIT",
     "authors": [
         {
