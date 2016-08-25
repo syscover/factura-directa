@@ -1,4 +1,4 @@
-<?php namespace Syscover\Facturadirecta\Libraries;
+<?php namespace Syscover\FacturaDirecta\Libraries;
 
 class RemoteLibrary
 {
