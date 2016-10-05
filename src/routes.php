@@ -17,12 +17,12 @@ Route::group(['middleware' => ['web', 'pulsar']], function() {
     | CUSTOMERS
     |--------------------------------------------------------------------------
     */
-    Route::post(config('pulsar.appName') . 'api/factura/directa/customers', ['as' => 'apiFacturaDirectaCustomers',    'uses' => 'Syscover\FacturaDirecta\Controllers\FacturaDirectaController@getClients']);
+    Route::post(config('pulsar.name') . 'api/factura/directa/customers', ['as' => 'apiFacturaDirectaCustomers',    'uses' => 'Syscover\FacturaDirecta\Controllers\FacturaDirectaController@getClients']);
 
     /*
     |--------------------------------------------------------------------------
     | INVOICES
     |--------------------------------------------------------------------------
     */
-    Route::post(config('pulsar.appName') . 'api/factura/directa/invoices', ['as' => 'apiFacturaDirectaInvoices',    'uses' => 'Syscover\FacturaDirecta\Controllers\FacturaDirectaController@getInvoices']);
+    Route::post(config('pulsar.name') . 'api/factura/directa/invoices', ['as' => 'apiFacturaDirectaInvoices',    'uses' => 'Syscover\FacturaDirecta\Controllers\FacturaDirectaController@getInvoices']);
 });
