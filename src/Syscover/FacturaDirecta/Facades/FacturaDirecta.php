@@ -2,8 +2,8 @@
 
 use Illuminate\Support\Facades\Facade;
 
-class FacturaDirecta extends Facade {
-
+class FacturaDirecta extends Facade
+{
 	/**
 	 * Get the registered name of the component.
 	 *
